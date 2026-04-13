@@ -10,42 +10,42 @@ const Testimonials = () => {
       role: 'CTO, Tech Innovations Inc.',
       content: 'CircuitForge transformed our IoT device development with their exceptional PCB design expertise. The attention to detail and commitment to quality exceeded our expectations.',
       rating: 5,
-      avatar: 'SC'
+      avatar: '/images/avatar/img_20260413.png'
     },
     {
       name: 'Michael Rodriguez',
       role: 'Hardware Engineer, MedTech Solutions',
       content: 'Working with CircuitForge on our medical device controllers was a game-changer. Their reverse engineering capabilities helped us improve our existing designs significantly.',
       rating: 5,
-      avatar: 'MR'
+      avatar: '/images/avatar/photo-1507003211169-0a1dd7228f2d.jpg'
     },
     {
       name: 'Emily Watson',
       role: 'Product Manager, AutoTech Systems',
       content: 'The automotive ECU modules delivered by CircuitForge have been flawless. Their understanding of automotive requirements and safety standards is impressive.',
       rating: 5,
-      avatar: 'EW'
+      avatar: '/images/avatar/photo-1438761681033-6461ffad8d80.jpg'
     },
     {
       name: 'David Kim',
       role: 'CEO, Smart Home Devices',
       content: 'CircuitForge\'s rapid prototyping services helped us get to market 6 months ahead of schedule. Their team is responsive, professional, and technically brilliant.',
       rating: 5,
-      avatar: 'DK'
+      avatar: '/images/avatar/photo-1472099645785-5658abf4ff4e.jpg'
     },
     {
       name: 'Lisa Anderson',
       role: 'R&D Director, Industrial Automation Corp',
       content: 'The industrial control systems designed by CircuitForge have been running 24/7 for over two years without a single failure. Outstanding reliability and support.',
       rating: 5,
-      avatar: 'LA'
+      avatar: '/images/avatar/photo-1544005313-94ddf0286df2.jpg'
     },
     {
       name: 'James Taylor',
       role: 'VP Engineering, Power Systems Ltd',
       content: 'CircuitForge\'s power management PCBs have revolutionized our renewable energy products. The efficiency gains and reliability improvements have been remarkable.',
       rating: 5,
-      avatar: 'JT'
+      avatar: '/images/avatar/photo-1560250097-0b93528c311a.jpg'
     }
   ]
 
@@ -100,9 +100,11 @@ const Testimonials = () => {
 
               {/* Author */}
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold transition-transform duration-300 hover:scale-110">
-                  {testimonial.avatar}
-                </div>
+                <img
+                  src={testimonial.avatar}
+                  alt={testimonial.name}
+                  className="w-12 h-12 rounded-full object-cover transition-transform duration-300 hover:scale-110"
+                />
                 <div>
                   <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
                   <p className="text-sm text-gray-600">{testimonial.role}</p>
